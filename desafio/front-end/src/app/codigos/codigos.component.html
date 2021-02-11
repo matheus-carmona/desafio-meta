@@ -1,0 +1,22 @@
+<div class="container-main">
+    <div class="container-content">
+        <div class="botao">
+            <img [routerLink]="'/'" src="../../assets/back.svg">
+        </div>
+        
+        <div class="container-table">
+            <table rules="none">
+                <thead>
+                    <tr><th>Country</th><th>Code</th></tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let pais of paises">
+                   <td>{{pais["wb:name"]}}</td>
+
+                    <td>{{pais["wb:iso2Code"]}}</td>
+                 </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>>

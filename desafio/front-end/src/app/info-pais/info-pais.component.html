@@ -1,0 +1,26 @@
+<div class="container-main">
+    <div class="container-content">
+        <div class="botao">
+            <img [routerLink]="'/'" src="../../assets/back.svg">
+        </div>
+        <div class="erro" *ngIf="erro; else elseBlock">
+            Ocorreu um erro. Volte à tela principal.
+       </div>
+       <ng-template #elseBlock>
+            <div class="container-table">
+                <table rules="none">
+                    <thead>
+                        <tr><th>Indicator</th><th>Year</th></tr>
+                    </thead>
+                    <tbody>
+                    <tr *ngFor="let info of infoPais">
+                    <td>{{info["wb:value"]}}</td>
+
+                        <td>{{info["wb:date"]}}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+       </ng-template>
+    </div>
+</div>

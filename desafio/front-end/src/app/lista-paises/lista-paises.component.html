@@ -1,0 +1,13 @@
+<div class="container-main">
+    <div class="container-form">
+        <form>
+        <label>World Bank Extreme Poverty Indicators (By Year)</label>
+        <input type="text" #codigoPais placeholder="Country Code" maxlength="3">
+        <div>
+            <button type="button" [routerLink]="'/codigos'">See codes</button> 
+            <button type="button" (click)="enviar(codigoPais.value)">Send</button>
+        </div>       
+        <div *ngIf="erro" class="erro">Por favor, insira um código existente na tabela.</div>
+        </form>
+    </div>
+</div>
